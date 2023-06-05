@@ -1,13 +1,222 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  background-image: url('./assets/bg-light.png');
+  min-height: 100vh;
+  background-size: cover;
+  transition: 0.4s;
 }
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  
+}
+
+.section{
+  width: 100%;
+  padding: 1rem;
+
+}
+
+.section-search {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-search .search-bar {
+  /* display: block; */
+  width: 100%;
+  padding: 15px;
+  color: #313131;
+  font-size: 20px;
+  appearance: none;
+  border:none;
+  outline: none;
+  background: none;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px 16px 16px 16px;
+  transition: 0.4s;
+}
+
+.section-search .search-btn {
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  background-color: rgba(99, 14, 155, 0.5);
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 5em;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 75vh;
+}
+
+.card .today {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card .temp {
+  font-size: 80px;
+  color: rgb(119, 49, 199);
+  font-weight: bold;
+  font-family: 'Arial';
+}
+
+.card .min_max{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card .description .place {
+  display: flex;
+  column-gap: 5em;
+  flex-wrap: wrap;
+  color: #4f4b4b;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+img{
+  height: 280px;
+  max-width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 1000px
+}
+
+.sun_cloud{
+  display: flex;
+  column-gap: 5em;
+  flex-wrap: wrap;
+  float: right;
+  font-size: 18px;
+  margin-top: -1em;
+  color: #787575;
+}
+
+.history {
+  margin-top: 1em;
+  justify-content: space-between;
+  padding: 20px;
+  width: 96%;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 50vh;
+  overflow-y: auto;
+}
+
+.history .title {
+  font-weight: bold;
+}
+
+.history .details {
+  margin-top: 1em;
+  justify-content: space-between;
+  padding: 20px;
+  width: 96%;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: auto;
+  display: flex;
+  color: #313131;
+}
+
+.history .details .search-btn {
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  color: #000000;
+  background-color: #fff;
+  cursor: pointer;
+  color: #525050;
+}
+
+
+@media screen and (max-width: 1400px) {
+  img {
+    height: 250px;
+    max-width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 600px
+  }
+
+  .sun_cloud{
+    display: flex;
+    column-gap: 5em;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    float: right;
+    font-size: 18px;
+    margin-top: -1em;
+    color: #787575;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  img {
+    height: 200px;
+    max-width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 400px
+  }
+
+  .sun_cloud{
+    display: flex;
+    column-gap: 5em;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    float: right;
+    font-size: 18px;
+    margin-top: -4em;
+    color: #787575;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  img {
+    height: 200px;
+    max-width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 200px
+  }
+
+  .sun_cloud{
+    display: flex;
+    column-gap: 5em;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    float: right;
+    font-size: 18px;
+    margin-top: -4em;
+    color: #787575;
+    flex-direction: column;
+  }
+}
+
